@@ -1,8 +1,2 @@
-*.bin
-*.gmap
-*.lst
-*.sym
-!files.lst
 .vscode
 .DS_Store
-props.cfg
