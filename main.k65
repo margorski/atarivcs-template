@@ -1,0 +1,10 @@
+main {
+    .full_reset:
+    init
+    {   
+        seqbrk=a=16 // Break next effect on absolute sequence number
+        bigtext
+
+        goto .full_reset
+    } always
+}
