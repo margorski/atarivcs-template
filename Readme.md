@@ -1,7 +1,3 @@
-# Atari VCS project template using K65 compiler
+# K65 compiler templates
 
-Project use K65 compiler, Stella emulator and very simple makefile to build project. 
-
-You need to set K65_PATH environment variables pointing to root folder of K65 SDK. And Stella.exe needs to be put inside K65_PATH\bin directory.
-
-
+My own small project templates using K65 compilers for different platforms. Every template is set in seperate directory. Every template needs to have set K65_PATH environmental variable pointing to K65 SDK root directory and emulator binaries needs to be place inside K65_PATH\bin directory.
