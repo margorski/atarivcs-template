@@ -1,0 +1,51 @@
+[ TEXT_HEIGHT = 30 ]
+data bigtext_left0 { nocross image "data/youcandance_playfiled"  3 [TEXT_HEIGHT-1] 8< [TEXT_HEIGHT]^	inv}
+data bigtext_left1 { nocross image "data/youcandance_playfiled"  4 [TEXT_HEIGHT-1] 8> [TEXT_HEIGHT]^	inv }
+data bigtext_left2 { nocross image "data/youcandance_playfiled" 19 [TEXT_HEIGHT-1] 8< [TEXT_HEIGHT]^	inv }
+
+data bigtext_right0 { nocross image "data/youcandance_playfiled"  23 [TEXT_HEIGHT-1] 8< [TEXT_HEIGHT]^	inv}
+data bigtext_right1 { nocross image "data/youcandance_playfiled"  24 [TEXT_HEIGHT-1] 8> [TEXT_HEIGHT]^	inv}
+data bigtext_right2 { nocross image "data/youcandance_playfiled" 39 [TEXT_HEIGHT-1] 8< [TEXT_HEIGHT]^	inv}
+
+func draw {
+    pf0=a=bigtext_left0,y
+    pf1=a=bigtext_left1,y
+    pf2=a=bigtext_left2,y
+    *10
+    pf0=a=bigtext_right0,y
+    pf1=a=bigtext_right1,y
+    pf2=a=bigtext_right2,y
+}
+
+// entry point block is declared with "main"
+func bigtext {
+	ctpf=a=0x00 cbg=a=0x00 cpf=a=0x0F pf0=pf1=pf2=a=0x0 gp0=gp1=a=0    
+	{
+		sync1	
+			far song_player
+            BreakOnSeq 
+		sync2
+		sync3
+			y=30 { wsync y-- }!=
+            y=[TEXT_HEIGHT-1] 
+			{
+                wsync
+                draw
+				wsync
+				draw
+                wsync
+                draw
+                wsync
+                draw
+             wsync
+                draw    
+             wsync
+                draw    
+        
+                y--
+			}!=
+		wsync
+        pf0=pf1=pf2=a=0
+		gp0=gp1=a=0
+	} always	// loop forever
+}
