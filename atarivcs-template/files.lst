@@ -7,4 +7,4 @@ music\song_mini_sv18.k65	   audio
 music\music_player_mini.k65    audio
 effects\bigtext.k65            core
 main.k65                       core
--o demo.bin
+-o bin\demo.bin

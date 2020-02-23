@@ -9,4 +9,4 @@ main:
 	_makeprops.bat
 	
 run:
-	$(STELLABIN) -propsfile props.cfg demo.bin
+	$(STELLABIN) -propsfile props.cfg bin\demo.bin
