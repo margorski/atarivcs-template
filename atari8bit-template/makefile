@@ -1,5 +1,11 @@
-ALTIRRABIN=${K65_PATH}\bin\Altirra.exe
-K65=${K65_PATH}\bin\k65.exe
+ifeq ($(OS),Windows_NT)
+	EMUBIN=${K65_PATH}\bin\Altirra.exe
+else
+    EMUBIN=atari800
+endif
+
+
+K65=${K65_PATH}/workdir/k65.exe
 FilesList=files.lst
 
 all: main run
@@ -8,4 +14,4 @@ main:
 	$(K65) @$(FilesList)
 	
 run:
-	$(ALTIRRABIN) bin\example.xex
+	$(EMUBIN) bin/example.xex

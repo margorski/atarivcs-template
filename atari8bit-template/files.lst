@@ -5,6 +5,6 @@
 _defs.k65		main
 main.k65		main
 
--o bin\example.xex
+-o bin/example.xex
 
 -link
